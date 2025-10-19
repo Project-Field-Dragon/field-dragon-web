@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./Home/Home";
 import Products from "./Products/Products";
+import Orders from './Orders/Orders'; // <-- 1. 已加入 Orders 匯入 [cite: 734]
 
 function App() {
   const openMenu = () => {
@@ -23,6 +24,7 @@ function App() {
           <div className="header-links">
             <Link to="/">Home</Link>
             <Link to="/catalog">Catalog</Link>
+            <Link to="/orders">Orders</Link> {/* <-- 2. 已加入 Orders 連結 [cite: 721] */}
           </div>
         </header>
 
@@ -43,6 +45,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/catalog" element={<Products />} />
+            <Route path="orders" element={<Orders />} /> {/* <-- 3. 已加入 Orders 路由 [cite: 728] */}
           </Routes>
         </main>
 

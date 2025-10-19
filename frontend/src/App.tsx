@@ -4,6 +4,7 @@ import Home from "./Home/Home";
 import Products from "./Products/Products";
 import Orders from './Orders/Orders';
 import OrderDetail from './Orders/OrderDetail';
+import PaymentScreen from './Payment/Payment'; // <-- 1. 已加入 Payment 匯入
 
 function App() {
   const openMenu = () => {
@@ -26,6 +27,7 @@ function App() {
             <Link to="/">Home</Link>
             <Link to="/catalog">Catalog</Link>
             <Link to="/orders">Orders</Link>
+            <Link to="/payment">Payment</Link> {/* <-- 2. 已加入 Payment 連結 */}
           </div>
         </header>
 
@@ -48,6 +50,7 @@ function App() {
             <Route path="/catalog" element={<Products />} />
             <Route path="orders" element={<Orders />} />
             <Route path="/order/:id" element={<OrderDetail />} />
+            <Route path="/payment" element={<PaymentScreen />} /> {/* <-- 3. 已加入 Payment 路由 */}
           </Routes>
         </main>
 

@@ -59,3 +59,7 @@ input {
   border: 0.1rem #c0c0c0 solid;
   border-radius: 0.5rem;
 }
+/* Fulfillment CSS */
+.table tbody > tr.unshipped {
+  color: #ff0000; /* Red color */
+}

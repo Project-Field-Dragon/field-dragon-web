@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "react-router-dom": "^6.0.0"
+  }
+}
+
+import React from 'react';
+import { render } from '@testing-library/react';
+
+const HelloWorld = () => <div>Hello, World!</div>;
+
+test('renders hello world', () => {
+  const { getByText } = render(<HelloWorld />);
+  const linkElement = getByText(/hello, world!/i);
+  expect(linkElement).toBeInTheDocument();
+});

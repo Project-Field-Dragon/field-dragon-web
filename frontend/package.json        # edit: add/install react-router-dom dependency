@@ -1,0 +1,27 @@
+{
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^6.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^12.0.0",
+    "jest": "^27.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+} 
+
+import React from 'react';
+import { render } from '@testing-library/react';
+
+const HelloWorld = () => <div>Hello, World!</div>;
+
+test('renders Hello, World!', () => {
+  const { getByText } = render(<HelloWorld />);
+  const linkElement = getByText(/Hello, World!/i);
+  expect(linkElement).toBeInTheDocument();
+});
